@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
-	"github.com/coredhcp/coredhcp/plugins/allocators"
-	"github.com/coredhcp/coredhcp/plugins/allocators/bitmap"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/plugins/allocators"
+	"github.com/Owasd/coredhcp/plugins/allocators/bitmap"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 )
 
@@ -29,7 +29,7 @@ var Plugin = plugins.Plugin{
 	Setup4: setupRange,
 }
 
-//Record holds an IP lease record
+// Record holds an IP lease record
 type Record struct {
 	IP      net.IP
 	expires time.Time

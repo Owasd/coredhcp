@@ -9,9 +9,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 )
 
@@ -48,7 +48,7 @@ func setup4(args ...string) (handler.Handler4, error) {
 	return Handler4, nil
 }
 
-//Handler4 handles DHCPv4 packets for the netmask plugin
+// Handler4 handles DHCPv4 packets for the netmask plugin
 func Handler4(req, resp *dhcpv4.DHCPv4) (*dhcpv4.DHCPv4, bool) {
 	resp.Options.Update(dhcpv4.OptSubnetMask(netmask))
 	return resp, false

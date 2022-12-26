@@ -7,9 +7,9 @@ package searchdomains
 // This is an searchdomains plugin that adds default DNS search domains.
 
 import (
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 	"github.com/insomniacslk/dhcp/dhcpv6"
 	"github.com/insomniacslk/dhcp/rfc1035label"
@@ -23,11 +23,11 @@ var log = logger.GetLogger("plugins/searchdomains")
 // plugins section. For searchdomains:
 //
 // server6:
-//   listen: '[::]547'
-//   - searchdomains: domain.a domain.b
-//   - server_id: LL aa:bb:cc:dd:ee:ff
-//   - file: "leases.txt"
 //
+//	listen: '[::]547'
+//	- searchdomains: domain.a domain.b
+//	- server_id: LL aa:bb:cc:dd:ee:ff
+//	- file: "leases.txt"
 var Plugin = plugins.Plugin{
 	Name:   "searchdomains",
 	Setup6: setup6,

@@ -1,4 +1,4 @@
-module github.com/coredhcp/coredhcp
+module github.com/Owasd/coredhcp
 
 go 1.13
 

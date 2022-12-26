@@ -2,6 +2,7 @@
 // This source code is licensed under the MIT license found in the
 // LICENSE file in the root directory of this source tree.
 
+//go:build integration
 // +build integration
 
 package e2e_test
@@ -19,13 +20,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/vishvananda/netns"
 
-	"github.com/coredhcp/coredhcp/config"
-	"github.com/coredhcp/coredhcp/plugins"
-	"github.com/coredhcp/coredhcp/server"
+	"github.com/Owasd/coredhcp/config"
+	"github.com/Owasd/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/server"
 
 	// Plugins
-	"github.com/coredhcp/coredhcp/plugins/file"
-	"github.com/coredhcp/coredhcp/plugins/serverid"
+	"github.com/Owasd/coredhcp/plugins/file"
+	"github.com/Owasd/coredhcp/plugins/serverid"
 )
 
 var serverConfig = config.Config{

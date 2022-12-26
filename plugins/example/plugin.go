@@ -10,9 +10,9 @@ package example
 // Feedback is welcome!
 
 import (
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 	"github.com/insomniacslk/dhcp/dhcpv6"
 )
@@ -30,15 +30,17 @@ var log = logger.GetLogger("plugins/example")
 // functions:
 //
 // import (
-//     "github.com/coredhcp/coredhcp/plugins"
-//     "github.com/coredhcp/coredhcp/plugins/example"
+//
+//	"github.com/coredhcp/coredhcp/plugins"
+//	"github.com/coredhcp/coredhcp/plugins/example"
+//
 // )
 //
-// var Plugin = plugins.Plugin{
-//     Name: "example",
-//     Setup6: setup6,
-//     Setup4: setup4,
-// }
+//	var Plugin = plugins.Plugin{
+//	    Name: "example",
+//	    Setup6: setup6,
+//	    Setup4: setup4,
+//	}
 //
 // Name is simply the name used to register the plugin. It must be unique to
 // other registered plugins, or the operation will fail. In other words, don't
@@ -56,11 +58,11 @@ var log = logger.GetLogger("plugins/example")
 // plugins section. For example:
 //
 // server6:
-//   listen: '[::]547'
-//   - example:
-//   - server_id: LL aa:bb:cc:dd:ee:ff
-//   - file: "leases.txt"
 //
+//	listen: '[::]547'
+//	- example:
+//	- server_id: LL aa:bb:cc:dd:ee:ff
+//	- file: "leases.txt"
 var Plugin = plugins.Plugin{
 	Name:   "example",
 	Setup6: setup6,

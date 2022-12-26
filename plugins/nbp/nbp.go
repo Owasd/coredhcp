@@ -21,21 +21,20 @@
 //
 // server6:
 //   - plugins:
-//     - nbp: http://[2001:db8:a::1]/nbp
+//   - nbp: http://[2001:db8:a::1]/nbp
 //
 // server4:
 //   - plugins:
-//     - nbp: tftp://10.0.0.254/nbp
-//
+//   - nbp: tftp://10.0.0.254/nbp
 package nbp
 
 import (
 	"fmt"
 	"net/url"
 
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 	"github.com/insomniacslk/dhcp/dhcpv6"
 )

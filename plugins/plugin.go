@@ -7,9 +7,9 @@ package plugins
 import (
 	"errors"
 
-	"github.com/coredhcp/coredhcp/config"
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
+	"github.com/Owasd/coredhcp/config"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
 )
 
 var log = logger.GetLogger("plugins")

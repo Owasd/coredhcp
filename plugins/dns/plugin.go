@@ -8,9 +8,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/coredhcp/coredhcp/handler"
-	"github.com/coredhcp/coredhcp/logger"
-	"github.com/coredhcp/coredhcp/plugins"
+	"github.com/Owasd/coredhcp/handler"
+	"github.com/Owasd/coredhcp/logger"
+	"github.com/Owasd/coredhcp/plugins"
 	"github.com/insomniacslk/dhcp/dhcpv4"
 	"github.com/insomniacslk/dhcp/dhcpv6"
 )
@@ -74,7 +74,7 @@ func Handler6(req, resp dhcpv6.DHCPv6) (dhcpv6.DHCPv6, bool) {
 	return resp, false
 }
 
-//Handler4 handles DHCPv4 packets for the dns plugin
+// Handler4 handles DHCPv4 packets for the dns plugin
 func Handler4(req, resp *dhcpv4.DHCPv4) (*dhcpv4.DHCPv4, bool) {
 	if req.IsOptionRequested(dhcpv4.OptionDomainNameServer) {
 		resp.Options.Update(dhcpv4.OptDNS(dnsServers4...))
